@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Globo Azul · Excursiones y experiencias</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--fondo:#efeaff;--lila:#b9a6ff;--cielo:#8fd0ff;--coral:#ff9a8a;--limon:#e7f58a;--tinta:#3a2f66}
+  body{font-family:'Baloo 2',sans-serif;background:var(--fondo);color:var(--tinta);font-size:1.05rem}
+  h1,h2,h3,h4,h5{font-weight:800}
+  .clay{border-radius:2rem;box-shadow:inset -8px -8px 16px rgba(60,30,120,.14),inset 8px 8px 16px rgba(255,255,255,.8),10px 14px 28px rgba(80,50,160,.22)}
+  .clay-sm{border-radius:1.2rem;box-shadow:inset -5px -5px 10px rgba(60,30,120,.14),inset 5px 5px 10px rgba(255,255,255,.75),6px 9px 16px rgba(80,50,160,.22)}
+  .btn-clay{border:0;border-radius:50rem;font-weight:700;padding:.65rem 1.7rem;color:var(--tinta);box-shadow:inset -5px -5px 10px rgba(60,30,120,.16),inset 5px 5px 10px rgba(255,255,255,.7),6px 9px 16px rgba(80,50,160,.25);transition:transform .15s}
+  .btn-clay:hover{transform:translateY(-3px);color:var(--tinta)}
+  .btn-clay:active{transform:translateY(1px)}
+  .bg-lila{background:var(--lila)}.bg-cielo{background:var(--cielo)}.bg-coral{background:var(--coral)}.bg-limon{background:var(--limon)}
+  .navbar{max-width:1140px;margin:1rem auto;padding:.6rem 1.2rem;background:#fff}
+  .navbar-brand{font-weight:800;font-size:1.5rem;color:var(--tinta)!important}
+  .nav-link{color:var(--tinta)!important;font-weight:600}
+  .nav-link.active{background:var(--limon);border-radius:50rem;box-shadow:inset -3px -3px 6px rgba(60,30,120,.12),inset 3px 3px 6px rgba(255,255,255,.7)}
+  .navbar-toggler{border:0;padding:.3rem .6rem}
+  .navbar-toggler:focus{box-shadow:0 0 0 .2rem rgba(185,166,255,.6)}
+  .form-control,.form-select{border:0;border-radius:1.2rem;padding:.8rem 1.2rem;background:#fff;box-shadow:inset 5px 5px 10px rgba(80,50,160,.14),inset -4px -4px 8px #fff;font-family:inherit}
+  .form-control:focus,.form-select:focus{box-shadow:inset 5px 5px 10px rgba(80,50,160,.14),inset -4px -4px 8px #fff,0 0 0 4px rgba(185,166,255,.6)}
+  .hero{min-height:480px;background:linear-gradient(120deg,rgba(58,47,102,.65),rgba(58,47,102,.15)),url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=70') center/cover,var(--lila);color:#fff;display:flex;align-items:center}
+  .tour-img{height:200px;object-fit:cover;width:100%}
+  .ico{width:3.4rem;height:3.4rem;display:grid;place-items:center;font-size:1.5rem}
+  .social a{width:3rem;height:3rem;display:inline-grid;place-items:center;font-size:1.2rem;color:var(--tinta);text-decoration:none;margin:0 .25rem;transition:transform .15s}
+  .social a:hover{transform:translateY(-3px)}
+  [data-page]{display:none}[data-page].on{display:block}
+  .accordion-item{border:0;background:transparent;margin-bottom:1rem}
+  .accordion-button{border-radius:1.2rem!important;font-weight:700;background:#fff;color:var(--tinta);box-shadow:inset -4px -4px 8px rgba(60,30,120,.1),inset 4px 4px 8px #fff,5px 7px 14px rgba(80,50,160,.18)}
+  .accordion-button:not(.collapsed){background:var(--limon);color:var(--tinta)}
+  .accordion-button:focus{box-shadow:0 0 0 .2rem rgba(185,166,255,.6)}
+  .accordion-body{padding:1rem 1.2rem}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg clay">
+    <a class="navbar-brand" href="#inicio"><i class="bi bi-balloon me-2" style="color:var(--coral)"></i>Globo Azul</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list fs-2"></i></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 pt-3 pt-lg-0">
+        <li class="nav-item"><a class="nav-link px-3" data-link="inicio" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link px-3" data-link="experiencias" href="#experiencias">Experiencias</a></li>
+        <li class="nav-item"><a class="nav-link px-3" data-link="equipo" href="#equipo">Equipo</a></li>
+        <li class="nav-item"><a class="nav-link px-3" data-link="ayuda" href="#ayuda">Ayuda</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-clay bg-coral" href="#contacto">Reservar</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<main class="container pb-5">
+
+  <!-- INICIO -->
+  <section data-page="inicio">
+    <div class="hero clay p-4 p-md-5">
+      <div style="max-width:560px">
+        <h1 class="display-4">El mundo cabe en una buena excursión</h1>
+        <p class="fs-5">Ciudades, volcanes, mares y mercados. Experiencias suaves y coloridas, listas para reservar.</p>
+        <div class="d-flex flex-wrap gap-3 mt-3"><a class="btn btn-clay bg-limon" href="#experiencias">Ver experiencias</a><a class="btn btn-clay bg-white" href="#equipo">Conocer al equipo</a></div>
+      </div>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-4"><div class="clay bg-cielo p-4 h-100"><div class="ico clay-sm bg-white mb-2"><i class="bi bi-globe-americas"></i></div><h4>20 destinos</h4><p class="mb-0">Salidas desde las principales ciudades.</p></div></div>
+      <div class="col-md-4"><div class="clay bg-lila p-4 h-100"><div class="ico clay-sm bg-white mb-2"><i class="bi bi-chat-heart"></i></div><h4>Atención amable</h4><p class="mb-0">Respondemos todas tus dudas por chat.</p></div></div>
+      <div class="col-md-4"><div class="clay bg-coral p-4 h-100"><div class="ico clay-sm bg-white mb-2"><i class="bi bi-wallet2"></i></div><h4>Precios claros</h4><p class="mb-0">Sin cargos escondidos ni letra pequeña.</p></div></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIAS -->
+  <section data-page="experiencias" class="pt-3">
+    <h1 class="mb-1">Experiencias</h1>
+    <p class="mb-4">Elige una y reserva en un minuto.</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><article class="clay bg-white p-3 h-100"><img class="tour-img clay-sm" loading="lazy" alt="Ciudad japonesa" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=70"><h4 class="mt-3">Ciudad de luces</h4><p class="small mb-3">Paseo nocturno con comida callejera incluida.</p><div class="d-flex justify-content-between align-items-center"><b class="fs-5">49 €</b><a href="#contacto" class="btn btn-clay btn-sm bg-limon">Reservar</a></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="clay bg-white p-3 h-100"><img class="tour-img clay-sm" loading="lazy" alt="Barco en bahía" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=70"><h4 class="mt-3">Bahía en barco</h4><p class="small mb-3">Navegación entre islotes con almuerzo a bordo.</p><div class="d-flex justify-content-between align-items-center"><b class="fs-5">72 €</b><a href="#contacto" class="btn btn-clay btn-sm bg-cielo">Reservar</a></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="clay bg-white p-3 h-100"><img class="tour-img clay-sm" loading="lazy" alt="Ruinas antiguas" src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=70"><h4 class="mt-3">Ruinas y misterios</h4><p class="small mb-3">Visita guiada con historia, mitos y miradores.</p><div class="d-flex justify-content-between align-items-center"><b class="fs-5">85 €</b><a href="#contacto" class="btn btn-clay btn-sm bg-coral">Reservar</a></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="clay bg-white p-3 h-100"><img class="tour-img clay-sm" loading="lazy" alt="Santorini" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=70"><h4 class="mt-3">Atardecer en la isla</h4><p class="small mb-3">Terrazas blancas, vino local y vistas al mar.</p><div class="d-flex justify-content-between align-items-center"><b class="fs-5">64 €</b><a href="#contacto" class="btn btn-clay btn-sm bg-lila">Reservar</a></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="clay bg-white p-3 h-100"><img class="tour-img clay-sm" loading="lazy" alt="Buceo" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=70"><h4 class="mt-3">Bautismo de buceo</h4><p class="small mb-3">Primera inmersión con instructor y fotos.</p><div class="d-flex justify-content-between align-items-center"><b class="fs-5">90 €</b><a href="#contacto" class="btn btn-clay btn-sm bg-limon">Reservar</a></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="clay bg-white p-3 h-100"><img class="tour-img clay-sm" loading="lazy" alt="Canales" src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=70"><h4 class="mt-3">Canales y puentes</h4><p class="small mb-3">Ruta a pie y paseo en góndola opcional.</p><div class="d-flex justify-content-between align-items-center"><b class="fs-5">38 €</b><a href="#contacto" class="btn btn-clay btn-sm bg-cielo">Reservar</a></div></article></div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section data-page="equipo" class="pt-3">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6"><h1>Hola, somos Globo Azul</h1><p class="fs-5">Un equipo pequeño y viajero que diseña excursiones con humor, cariño y buen café. Queremos que cada salida se sienta como ir con amigos.</p><p>Nuestros guías hablan varios idiomas y siempre llevan un plan B por si cambia el tiempo.</p></div>
+      <div class="col-lg-6"><img class="clay w-100" style="height:340px;object-fit:cover" loading="lazy" alt="Viajeros felices" src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=1000&q=70"></div>
+    </div>
+    <div class="row g-4 mt-2">
+      <div class="col-6 col-md-3"><div class="clay bg-limon p-3 text-center"><h2 class="mb-0">10 años</h2><small>de viajes</small></div></div>
+      <div class="col-6 col-md-3"><div class="clay bg-cielo p-3 text-center"><h2 class="mb-0">25</h2><small>guías</small></div></div>
+      <div class="col-6 col-md-3"><div class="clay bg-coral p-3 text-center"><h2 class="mb-0">40 mil</h2><small>viajeros</small></div></div>
+      <div class="col-6 col-md-3"><div class="clay bg-lila p-3 text-center"><h2 class="mb-0">4.8/5</h2><small>valoración</small></div></div>
+    </div>
+  </section>
+
+  <!-- AYUDA -->
+  <section data-page="ayuda" class="pt-3">
+    <div class="mx-auto" style="max-width:760px">
+      <h1 class="mb-4">Preguntas frecuentes</h1>
+      <div class="accordion" id="faq">
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">¿Cómo reservo?</button></h2><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Elige tu experiencia, completa el formulario de contacto y te enviamos la confirmación por correo.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">¿Puedo pagar en cuotas?</button></h2><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sí, ofrecemos pago en dos plazos para reservas superiores a 100 €.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">¿Hay un mínimo de personas?</button></h2><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Las salidas se confirman con 4 personas. Si no se alcanza, te devolvemos el importe completo.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section data-page="contacto" class="pt-3">
+    <div class="row g-4">
+      <div class="col-lg-5"><div class="clay bg-lila p-4 h-100"><h1>Cuéntanos tu plan</h1><p>Te respondemos en el mismo día.</p><p class="mb-1"><i class="bi bi-envelope-heart me-2"></i>hola@globoazul.com</p><p class="mb-1"><i class="bi bi-telephone me-2"></i>+51 900 000 000</p><p class="mb-0"><i class="bi bi-geo-alt me-2"></i>Av. del Viajero 100, Centro</p></div></div>
+      <div class="col-lg-7"><form class="clay bg-white p-4" onsubmit="event.preventDefault();this.querySelector('button').textContent='¡Mensaje enviado!'"><div class="row g-3">
+        <div class="col-sm-6"><input class="form-control" placeholder="Nombre" required></div><div class="col-sm-6"><input class="form-control" type="email" placeholder="Correo" required></div>
+        <div class="col-12"><select class="form-select"><option>Ciudad de luces</option><option>Bahía en barco</option><option>Ruinas y misterios</option><option>Atardecer en la isla</option></select></div>
+        <div class="col-12"><textarea class="form-control" rows="4" placeholder="Mensaje"></textarea></div>
+        <div class="col-12"><button class="btn btn-clay bg-coral w-100">Enviar mensaje</button></div></div></form></div>
+    </div>
+  </section>
+</main>
+
+<footer class="container pb-4">
+  <div class="clay bg-white p-4 d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <span class="fw-bold fs-5"><i class="bi bi-balloon me-2" style="color:var(--coral)"></i>Globo Azul</span>
+    <div class="social">
+      <a class="clay-sm bg-cielo" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a class="clay-sm bg-coral" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a class="clay-sm bg-limon" href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a><a class="clay-sm bg-lila" href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a><a class="clay-sm bg-cielo" href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <small>© 2026 · Texto de ejemplo</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('[data-page]')],navEl=document.getElementById('nav');
+  function route(){
+    const h=(location.hash||'#inicio').slice(1),t=pages.find(p=>p.dataset.page===h)||pages[0];
+    pages.forEach(p=>p.classList.toggle('on',p===t));
+    document.querySelectorAll('[data-link]').forEach(a=>a.classList.toggle('active',a.dataset.link===t.dataset.page));
+    window.scrollTo(0,0);
+    if(navEl.classList.contains('show'))bootstrap.Collapse.getOrCreateInstance(navEl).hide();
+  }
+  addEventListener('hashchange',route);route();
+</script>
+<script>
+/* Si una imagen externa no carga, se muestra un fondo de color en su lugar */
+document.querySelectorAll('img').forEach(function(i){
+  function f(){i.removeAttribute('src');i.style.background='linear-gradient(135deg,#cfd8dc,#90a4ae)';i.style.minHeight=i.style.minHeight||'120px'}
+  i.addEventListener('error',f);
+  if(i.complete&&i.naturalWidth===0)f();
+});
+</script>
+</body>
+</html>

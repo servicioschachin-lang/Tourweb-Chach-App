@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rumbo Viajes · Tours y escapadas</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#e0e5ec;--sombra-osc:#a3b1c6;--sombra-clara:#ffffff;--acento:#6c5ce7;--texto:#3d4468;--suave:#7a82a6}
+  body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--texto)}
+  h1,h2,h3,h4,h5{font-weight:800;color:#2f3556}
+  .neu{background:var(--bg);border-radius:1.6rem;box-shadow:9px 9px 18px var(--sombra-osc),-9px -9px 18px var(--sombra-clara)}
+  .neu-sm{background:var(--bg);border-radius:1rem;box-shadow:5px 5px 10px var(--sombra-osc),-5px -5px 10px var(--sombra-clara)}
+  .neu-in{background:var(--bg);border-radius:1rem;box-shadow:inset 5px 5px 10px var(--sombra-osc),inset -5px -5px 10px var(--sombra-clara)}
+  .navbar{padding:1rem 0}
+  .navbar-brand{font-weight:800;color:var(--acento)!important;font-size:1.4rem}
+  .nav-link{color:var(--texto)!important;font-weight:600}
+  .nav-link:hover{color:var(--acento)!important}
+  .navbar-toggler{border:0;box-shadow:5px 5px 10px var(--sombra-osc),-5px -5px 10px var(--sombra-clara);border-radius:.9rem;background:var(--bg);padding:.4rem .7rem}
+  .navbar-toggler:focus{box-shadow:inset 3px 3px 6px var(--sombra-osc),inset -3px -3px 6px var(--sombra-clara)}
+  .navbar-collapse{margin-top:.8rem}
+  .btn-neu{background:var(--bg);color:var(--acento);font-weight:700;border:0;border-radius:50rem;padding:.75rem 1.7rem;box-shadow:6px 6px 12px var(--sombra-osc),-6px -6px 12px var(--sombra-clara);transition:box-shadow .2s}
+  .btn-neu:hover,.btn-neu:focus{color:var(--acento);box-shadow:inset 4px 4px 8px var(--sombra-osc),inset -4px -4px 8px var(--sombra-clara)}
+  .btn-main{background:var(--acento);color:#fff;box-shadow:6px 6px 14px rgba(108,92,231,.45),-6px -6px 12px var(--sombra-clara)}
+  .btn-main:hover,.btn-main:focus{color:#fff;box-shadow:inset 4px 4px 8px rgba(0,0,0,.25),inset -4px -4px 8px rgba(255,255,255,.2)}
+  .form-control,.form-select{background:var(--bg);border:0;border-radius:1rem;padding:.8rem 1.1rem;color:var(--texto);box-shadow:inset 5px 5px 10px var(--sombra-osc),inset -5px -5px 10px var(--sombra-clara)}
+  .form-control:focus,.form-select:focus{background:var(--bg);box-shadow:inset 5px 5px 10px var(--sombra-osc),inset -5px -5px 10px var(--sombra-clara),0 0 0 3px rgba(108,92,231,.3);color:var(--texto)}
+  .hero-img{height:100%;min-height:340px;border-radius:1.6rem;background:linear-gradient(rgba(60,50,120,.15),rgba(60,50,120,.35)),url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=70') center/cover,#b8bfd8;box-shadow:inset 0 0 0 8px var(--bg),inset 0 0 0 9px rgba(0,0,0,.04)}
+  .tour-img{height:190px;width:100%;object-fit:cover;border-radius:1.2rem}
+  .pill{display:inline-block;padding:.25rem .9rem;border-radius:50rem;font-size:.8rem;font-weight:700;color:var(--acento)}
+  .icon{width:3.5rem;height:3.5rem;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;color:var(--acento);margin-bottom:.8rem}
+  .social a{width:3rem;height:3rem;border-radius:50%;display:inline-grid;place-items:center;color:var(--acento);font-size:1.2rem;margin:0 .3rem;text-decoration:none;background:var(--bg);box-shadow:5px 5px 10px var(--sombra-osc),-5px -5px 10px var(--sombra-clara);transition:box-shadow .2s}
+  .social a:hover{box-shadow:inset 3px 3px 6px var(--sombra-osc),inset -3px -3px 6px var(--sombra-clara)}
+  .lead-soft{color:var(--suave)}
+  section{padding:4rem 0}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio"><i class="bi bi-signpost-split me-2"></i>Rumbo Viajes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list fs-3" style="color:var(--acento)"></i></button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pasos">Cómo funciona</a></li>
+        <li class="nav-item"><a class="nav-link" href="#opiniones">Opiniones</a></li>
+        <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-neu btn-main" href="#reservar">Reservar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="inicio" class="py-4">
+  <div class="container">
+    <div class="neu p-4 p-lg-5">
+      <div class="row g-4 g-lg-5 align-items-center">
+        <div class="col-lg-6">
+          <span class="pill neu-in mb-3">Tours en grupo y privados</span>
+          <h1 class="display-5 mb-3">Tu próxima escapada empieza con un buen plan</h1>
+          <p class="lead-soft fs-5">Rutas en coche, a pie y en barco por los rincones más bonitos. Reserva en minutos y viaja sin preocupaciones.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4"><a class="btn btn-neu btn-main" href="#tours">Ver tours</a><a class="btn btn-neu" href="#reservar">Hablar con un asesor</a></div>
+        </div>
+        <div class="col-lg-6"><div class="hero-img"></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="tours">
+  <div class="container">
+    <h2 class="mb-2">Escapadas destacadas</h2>
+    <p class="lead-soft mb-5">Tres formas de descubrir el destino a tu manera.</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><article class="neu p-3 h-100"><img class="tour-img mb-3" loading="lazy" alt="Costa mediterránea" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=70"><div class="px-2 pb-2"><span class="pill neu-in mb-2">1 día</span><h4>Pueblos de la costa</h4><p class="lead-soft small">Recorrido por aldeas pintorescas con parada para comer.</p><div class="d-flex justify-content-between align-items-center"><strong class="fs-5" style="color:var(--acento)">59 €</strong><a href="#reservar" class="btn btn-neu btn-sm">Reservar</a></div></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="neu p-3 h-100"><img class="tour-img mb-3" loading="lazy" alt="Ciudad con canales" src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=70"><div class="px-2 pb-2"><span class="pill neu-in mb-2">Medio día</span><h4>Ciudad histórica a pie</h4><p class="lead-soft small">Callejones, plazas y leyendas con guía local.</p><div class="d-flex justify-content-between align-items-center"><strong class="fs-5" style="color:var(--acento)">25 €</strong><a href="#reservar" class="btn btn-neu btn-sm">Reservar</a></div></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="neu p-3 h-100"><img class="tour-img mb-3" loading="lazy" alt="Isla griega" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=70"><div class="px-2 pb-2"><span class="pill neu-in mb-2">3 días</span><h4>Ruta por las islas</h4><p class="lead-soft small">Ferry, alojamiento y excursiones en un solo paquete.</p><div class="d-flex justify-content-between align-items-center"><strong class="fs-5" style="color:var(--acento)">290 €</strong><a href="#reservar" class="btn btn-neu btn-sm">Reservar</a></div></div></article></div>
+    </div>
+  </div>
+</section>
+
+<section id="pasos">
+  <div class="container">
+    <h2 class="mb-5 text-center">Cómo funciona</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4"><div class="neu p-4 h-100"><div class="icon neu-sm mx-auto"><i class="bi bi-search"></i></div><h5>Elige tu tour</h5><p class="lead-soft small mb-0">Compara rutas, precios y duración.</p></div></div>
+      <div class="col-md-4"><div class="neu p-4 h-100"><div class="icon neu-sm mx-auto"><i class="bi bi-calendar-check"></i></div><h5>Reserva tu fecha</h5><p class="lead-soft small mb-0">Confirmación inmediata por correo.</p></div></div>
+      <div class="col-md-4"><div class="neu p-4 h-100"><div class="icon neu-sm mx-auto"><i class="bi bi-emoji-smile"></i></div><h5>Disfruta el viaje</h5><p class="lead-soft small mb-0">Nosotros nos ocupamos de todo lo demás.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones">
+  <div class="container">
+    <h2 class="mb-5">Viajeros satisfechos</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="neu p-4 h-100"><p>“Todo salió perfecto, desde la recogida hasta la despedida.”</p><small class="lead-soft">Carmen · Madrid</small></div></div>
+      <div class="col-md-4"><div class="neu p-4 h-100"><p>“Guías simpáticos y horarios muy bien pensados.”</p><small class="lead-soft">Andrés · Bogotá</small></div></div>
+      <div class="col-md-4"><div class="neu p-4 h-100"><p>“Viajamos en familia y los niños se lo pasaron genial.”</p><small class="lead-soft">Sofía · Lima</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reservar">
+  <div class="container">
+    <div class="neu p-4 p-lg-5 mx-auto" style="max-width:760px">
+      <h2 class="mb-1">Solicita tu reserva</h2>
+      <p class="lead-soft mb-4">Rellena el formulario y te contactamos hoy mismo.</p>
+      <form class="row g-3" onsubmit="event.preventDefault();this.querySelector('button').textContent='Solicitud enviada'">
+        <div class="col-sm-6"><input class="form-control" placeholder="Nombre" required></div>
+        <div class="col-sm-6"><input type="email" class="form-control" placeholder="Correo electrónico" required></div>
+        <div class="col-sm-6"><select class="form-select"><option>Pueblos de la costa</option><option>Ciudad histórica a pie</option><option>Ruta por las islas</option></select></div>
+        <div class="col-sm-6"><input type="date" class="form-control" aria-label="Fecha"></div>
+        <div class="col-12"><textarea rows="3" class="form-control" placeholder="Comentarios"></textarea></div>
+        <div class="col-12 text-center"><button class="btn btn-neu btn-main px-5">Enviar solicitud</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="py-5 text-center">
+  <div class="container">
+    <p class="fw-bold fs-5 mb-3" style="color:var(--acento)"><i class="bi bi-signpost-split me-2"></i>Rumbo Viajes</p>
+    <div class="social mb-3">
+      <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <small class="lead-soft">© 2026 Rumbo Viajes · Texto de ejemplo</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const menu=document.getElementById('menu');
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(menu.classList.contains('show'))bootstrap.Collapse.getOrCreateInstance(menu).hide()}));
+</script>
+<script>
+/* Si una imagen externa no carga, se muestra un fondo de color en su lugar */
+document.querySelectorAll('img').forEach(function(i){
+  function f(){i.removeAttribute('src');i.style.background='linear-gradient(135deg,#cfd8dc,#90a4ae)';i.style.minHeight=i.style.minHeight||'120px'}
+  i.addEventListener('error',f);
+  if(i.complete&&i.naturalWidth===0)f();
+});
+</script>
+</body>
+</html>

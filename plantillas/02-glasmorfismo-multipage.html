@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurora Expediciones · Aventuras de montaña</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--rosa:#ff4d8d;--naranja:#ffa24c;--violeta:#2a1255}
+  body{font-family:'Sora',sans-serif;color:#fff;background:linear-gradient(160deg,#2a1255,#7a1f6b 50%,#d9482f) fixed;min-height:100vh}
+  .scene{position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(30,10,60,.5),rgba(60,10,40,.72)),url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=70') center/cover}
+  .glass{background:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.25);box-shadow:0 8px 32px rgba(20,0,40,.35);border-radius:1.4rem}
+  .navbar{margin:1rem auto;max-width:1140px;padding:.7rem 1.2rem}
+  .navbar .nav-link{color:rgba(255,255,255,.85);font-weight:400}
+  .navbar .nav-link:hover,.navbar .nav-link.active{color:var(--naranja)}
+  .navbar-toggler{border:1px solid rgba(255,255,255,.4);color:#fff}
+  .navbar-collapse.show,.navbar-collapse.collapsing{padding-top:.8rem}
+  .btn-aurora{background:linear-gradient(135deg,var(--rosa),var(--naranja));border:0;color:#fff;font-weight:600;border-radius:50rem;padding:.7rem 1.6rem}
+  .btn-aurora:hover{color:#fff;filter:brightness(1.1);transform:translateY(-2px)}
+  .btn-glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:50rem;padding:.7rem 1.6rem}
+  .btn-glass:hover{background:rgba(255,255,255,.25);color:#fff}
+  .form-control,.form-select{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:.9rem;padding:.75rem 1rem}
+  .form-control::placeholder{color:rgba(255,255,255,.6)}
+  .form-control:focus,.form-select:focus{background:rgba(255,255,255,.16);color:#fff;border-color:var(--naranja);box-shadow:0 0 0 .25rem rgba(255,162,76,.25)}
+  .form-select option{color:#222}
+  .tour-img{height:210px;object-fit:cover;width:100%;border-radius:1.4rem 1.4rem 0 0}
+  .hero{min-height:70vh;display:flex;align-items:center}
+  .icon-badge{width:3.2rem;height:3.2rem;border-radius:1rem;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,var(--rosa),var(--naranja))}
+  .social a{width:2.8rem;height:2.8rem;display:inline-grid;place-items:center;border-radius:50%;color:#fff;font-size:1.15rem;margin-right:.5rem;text-decoration:none}
+  .social a:hover{background:rgba(255,255,255,.25)}
+  .gal img{width:100%;height:230px;object-fit:cover;border-radius:1.2rem}
+  [data-page]{display:none}[data-page].on{display:block}
+</style>
+</head>
+<body>
+<div class="scene"></div>
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg glass">
+    <a class="navbar-brand text-white fw-bold" href="#inicio"><i class="bi bi-stars me-2" style="color:var(--naranja)"></i>Aurora Expediciones</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list fs-2"></i></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" data-link="inicio" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" data-link="tours" href="#tours">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" data-link="nosotros" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" data-link="galeria" href="#galeria">Galería</a></li>
+        <li class="nav-item"><a class="btn btn-aurora btn-sm mt-2 mt-lg-0" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<main class="container pb-5">
+
+  <!-- INICIO -->
+  <section data-page="inicio">
+    <div class="hero">
+      <div class="row align-items-center g-5 w-100">
+        <div class="col-lg-7">
+          <h1 class="display-4 fw-bold">Amaneceres que se quedan contigo</h1>
+          <p class="lead mt-3" style="color:rgba(255,255,255,.85)">Expediciones de montaña, trekking nocturno y campamentos bajo las estrellas con guías certificados.</p>
+          <div class="mt-4 d-flex flex-wrap gap-3"><a class="btn btn-aurora" href="#tours">Explorar tours</a><a class="btn btn-glass" href="#nosotros">Conócenos</a></div>
+        </div>
+        <div class="col-lg-5">
+          <div class="glass p-4">
+            <div class="d-flex gap-3 mb-3"><div class="icon-badge"><i class="bi bi-brightness-alt-high"></i></div><div><h5 class="mb-0">Salidas al alba</h5><small class="text-white-50">Todos los fines de semana</small></div></div>
+            <div class="d-flex gap-3 mb-3"><div class="icon-badge"><i class="bi bi-moon-stars"></i></div><div><h5 class="mb-0">Cielos nocturnos</h5><small class="text-white-50">Campamento y astronomía</small></div></div>
+            <div class="d-flex gap-3"><div class="icon-badge"><i class="bi bi-backpack2"></i></div><div><h5 class="mb-0">Equipo incluido</h5><small class="text-white-50">Solo trae ganas de caminar</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4 mt-4 text-center">
+      <div class="col-6 col-md-3"><div class="glass p-3"><h3 class="fw-bold mb-0">12</h3><small>Rutas activas</small></div></div>
+      <div class="col-6 col-md-3"><div class="glass p-3"><h3 class="fw-bold mb-0">8 años</h3><small>De experiencia</small></div></div>
+      <div class="col-6 col-md-3"><div class="glass p-3"><h3 class="fw-bold mb-0">4.9</h3><small>Valoración media</small></div></div>
+      <div class="col-6 col-md-3"><div class="glass p-3"><h3 class="fw-bold mb-0">6 personas</h3><small>Por grupo</small></div></div>
+    </div>
+  </section>
+
+  <!-- TOURS -->
+  <section data-page="tours" class="pt-4">
+    <h1 class="fw-bold">Nuestros tours</h1>
+    <p style="color:rgba(255,255,255,.8)">Elige la ruta que mejor encaje con tu ritmo.</p>
+    <div class="row g-4 mt-1">
+      <div class="col-md-6 col-lg-4"><article class="glass h-100"><img class="tour-img" alt="Cumbres nevadas" loading="lazy" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h4>Cumbres al amanecer</h4><p class="small text-white-50">Ascenso de 6 horas con desayuno en la cima.</p><div class="d-flex justify-content-between align-items-center"><strong style="color:var(--naranja)">65 €</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="glass h-100"><img class="tour-img" alt="Campamento" loading="lazy" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h4>Noche de campamento</h4><p class="small text-white-50">Tiendas, fogata y cena preparada por el equipo.</p><div class="d-flex justify-content-between align-items-center"><strong style="color:var(--naranja)">80 €</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="glass h-100"><img class="tour-img" alt="Lago de montaña" loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h4>Ruta de los lagos</h4><p class="small text-white-50">Caminata suave entre miradores y aguas turquesa.</p><div class="d-flex justify-content-between align-items-center"><strong style="color:var(--naranja)">42 €</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="glass h-100"><img class="tour-img" alt="Senderista" loading="lazy" src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h4>Trekking de dos días</h4><p class="small text-white-50">Refugio de montaña y vistas de 360 grados.</p><div class="d-flex justify-content-between align-items-center"><strong style="color:var(--naranja)">120 €</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="glass h-100"><img class="tour-img" alt="Viajero frente al lago" loading="lazy" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h4>Fotografía de paisaje</h4><p class="small text-white-50">Taller práctico con un fotógrafo local.</p><div class="d-flex justify-content-between align-items-center"><strong style="color:var(--naranja)">55 €</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></article></div>
+      <div class="col-md-6 col-lg-4"><article class="glass h-100"><img class="tour-img" alt="Cielo estrellado" loading="lazy" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=70"><div class="p-4"><h4>Astronomía en altura</h4><p class="small text-white-50">Observación guiada con telescopio incluido.</p><div class="d-flex justify-content-between align-items-center"><strong style="color:var(--naranja)">48 €</strong><a href="#contacto" class="btn btn-glass btn-sm">Reservar</a></div></div></article></div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section data-page="nosotros" class="pt-4">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6"><h1 class="fw-bold">Un equipo que vive la montaña</h1><p class="mt-3" style="color:rgba(255,255,255,.85)">Somos un grupo de guías locales con formación en primeros auxilios y mucha curiosidad. Creemos en viajes pequeños, seguros y respetuosos con el entorno.</p><p style="color:rgba(255,255,255,.85)">Cada salida incluye guía, equipo básico, seguro y un plan alternativo si cambia el clima.</p></div>
+      <div class="col-lg-6"><img class="w-100 glass" style="height:340px;object-fit:cover" alt="Equipo en la montaña" loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=70"></div>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-heart fs-2" style="color:var(--rosa)"></i><h5 class="mt-2">Turismo responsable</h5><p class="small text-white-50 mb-0">Sin dejar rastro y apoyando a comunidades locales.</p></div></div>
+      <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-shield-check fs-2" style="color:var(--naranja)"></i><h5 class="mt-2">Seguridad primero</h5><p class="small text-white-50 mb-0">Guías certificados y protocolos claros.</p></div></div>
+      <div class="col-md-4"><div class="glass p-4 h-100"><i class="bi bi-people fs-2" style="color:var(--rosa)"></i><h5 class="mt-2">Grupos pequeños</h5><p class="small text-white-50 mb-0">Atención cercana en cada paso del camino.</p></div></div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section data-page="galeria" class="pt-4 gal">
+    <h1 class="fw-bold mb-4">Galería de viajeros</h1>
+    <div class="row g-3">
+      <div class="col-6 col-md-4"><img loading="lazy" alt="Montañas" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=70"></div>
+      <div class="col-6 col-md-4"><img loading="lazy" alt="Lago" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=70"></div>
+      <div class="col-6 col-md-4"><img loading="lazy" alt="Camping" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=700&q=70"></div>
+      <div class="col-6 col-md-4"><img loading="lazy" alt="Cumbre" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=70"></div>
+      <div class="col-6 col-md-4"><img loading="lazy" alt="Senderismo" src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=70"></div>
+      <div class="col-6 col-md-4"><img loading="lazy" alt="Cielo nocturno" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=700&q=70"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section data-page="contacto" class="pt-4">
+    <div class="row g-4">
+      <div class="col-lg-5"><h1 class="fw-bold">Hablemos de tu aventura</h1><p style="color:rgba(255,255,255,.85)">Cuéntanos qué te apetece y te proponemos fecha y ruta.</p>
+        <p class="mb-1"><i class="bi bi-envelope me-2"></i>hola@auroraexpediciones.com</p><p class="mb-1"><i class="bi bi-telephone me-2"></i>+34 600 000 000</p><p><i class="bi bi-geo-alt me-2"></i>Plaza Mayor 5, Valle Alto</p></div>
+      <div class="col-lg-7"><form class="glass p-4" onsubmit="event.preventDefault();this.querySelector('button').textContent='Mensaje enviado'">
+        <div class="row g-3"><div class="col-sm-6"><input class="form-control" placeholder="Nombre" required></div><div class="col-sm-6"><input type="email" class="form-control" placeholder="Correo" required></div>
+        <div class="col-12"><select class="form-select"><option>Cumbres al amanecer</option><option>Noche de campamento</option><option>Ruta de los lagos</option><option>Trekking de dos días</option></select></div>
+        <div class="col-12"><textarea class="form-control" rows="4" placeholder="Tu mensaje"></textarea></div>
+        <div class="col-12"><button class="btn btn-aurora w-100">Enviar mensaje</button></div></div></form></div>
+    </div>
+  </section>
+</main>
+
+<footer class="container pb-4">
+  <div class="glass p-4 d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <span class="fw-bold"><i class="bi bi-stars me-2" style="color:var(--naranja)"></i>Aurora Expediciones</span>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <small class="text-white-50">© 2026 · Texto de ejemplo</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('[data-page]')], navEl=document.getElementById('nav');
+  function route(){
+    const h=(location.hash||'#inicio').slice(1);
+    const target=pages.find(p=>p.dataset.page===h)||pages[0];
+    pages.forEach(p=>p.classList.toggle('on',p===target));
+    document.querySelectorAll('[data-link]').forEach(a=>a.classList.toggle('active',a.dataset.link===target.dataset.page));
+    window.scrollTo(0,0);
+    if(navEl.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(navEl).hide();
+  }
+  addEventListener('hashchange',route);route();
+</script>
+<script>
+/* Si una imagen externa no carga, se muestra un fondo de color en su lugar */
+document.querySelectorAll('img').forEach(function(i){
+  function f(){i.removeAttribute('src');i.style.background='linear-gradient(135deg,#cfd8dc,#90a4ae)';i.style.minHeight=i.style.minHeight||'120px'}
+  i.addEventListener('error',f);
+  if(i.complete&&i.naturalWidth===0)f();
+});
+</script>
+</body>
+</html>

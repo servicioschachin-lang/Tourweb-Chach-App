@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen · Viajes con calma</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>tailwind.config={theme:{extend:{fontFamily:{serif:['"Playfair Display"','serif'],sans:['Inter','sans-serif']}}}}</script>
+<style>
+  body{background:#fbfaf8;color:#1c1c1c;font-family:'Inter',sans-serif;font-weight:300}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
+  .hero{background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=70') center/cover,#6d7a80}
+  .line{border-color:#e4e1db}
+  .btn-line{display:inline-block;border:1px solid currentColor;padding:.8rem 1.8rem;font-size:.9rem;letter-spacing:.04em;transition:background .25s,color .25s}
+  .btn-line:hover{background:#1c1c1c;color:#fff;border-color:#1c1c1c}
+  .btn-white:hover{background:#fff;color:#1c1c1c;border-color:#fff}
+  .field{width:100%;border:0;border-bottom:1px solid #1c1c1c;background:transparent;padding:.8rem 0;outline:none;font-weight:300}
+  .field:focus{border-bottom-width:2px}
+  .tour img{transition:transform .8s}
+  .tour:hover img{transform:scale(1.04)}
+  @media (prefers-reduced-motion:reduce){.tour img{transition:none}}
+</style>
+</head>
+<body class="antialiased">
+
+<header class="absolute top-0 inset-x-0 z-40 text-white">
+  <div class="max-w-6xl mx-auto px-5 h-20 flex items-center justify-between">
+    <a href="#inicio" class="font-serif text-2xl tracking-wide">Lumen</a>
+    <nav class="hidden md:flex items-center gap-10 text-sm">
+      <a class="hover:opacity-70" href="#tours">Viajes</a>
+      <a class="hover:opacity-70" href="#filosofia">Filosofía</a>
+      <a class="hover:opacity-70" href="#opiniones">Opiniones</a>
+      <a class="btn-line btn-white !py-2 !px-5" href="#reservar">Reservar</a>
+    </nav>
+    <button id="burger" class="md:hidden text-3xl" aria-label="Abrir menú" aria-expanded="false"><i class="bi bi-list"></i></button>
+  </div>
+  <div id="mobile" class="hidden md:hidden bg-[#fbfaf8] text-[#1c1c1c] border-t line">
+    <nav class="flex flex-col px-5 py-4 gap-4 text-lg">
+      <a href="#tours">Viajes</a><a href="#filosofia">Filosofía</a><a href="#opiniones">Opiniones</a><a href="#reservar" class="underline underline-offset-4">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero min-h-[92vh] flex items-end text-white">
+    <div class="max-w-6xl mx-auto px-5 pb-20 w-full">
+      <h1 class="text-5xl sm:text-7xl leading-tight max-w-3xl">Menos itinerario, más lugar</h1>
+      <p class="mt-6 max-w-md text-lg text-white/85">Viajes guiados en grupos de cuatro a seis personas, con tiempo para mirar.</p>
+      <a href="#tours" class="btn-line btn-white mt-10">Ver los viajes</a>
+    </div>
+  </section>
+
+  <section id="tours" class="max-w-6xl mx-auto px-5 py-24">
+    <div class="flex items-end justify-between border-b line pb-6">
+      <h2 class="text-3xl sm:text-4xl">Próximas salidas</h2>
+      <p class="hidden sm:block text-sm opacity-60">Tres destinos, un ritmo</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mt-12">
+      <a href="#reservar" class="tour block"><div class="overflow-hidden"><img class="w-full aspect-[4/5] object-cover" loading="lazy" alt="Lago de montaña" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=70"></div><h3 class="text-2xl mt-5">Lagos del norte</h3><p class="mt-1 text-sm opacity-70">5 días · senderismo suave</p><p class="mt-3 text-sm">Desde 890 €</p></a>
+      <a href="#reservar" class="tour block md:mt-12"><div class="overflow-hidden"><img class="w-full aspect-[4/5] object-cover" loading="lazy" alt="Costa mediterránea" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=70"></div><h3 class="text-2xl mt-5">Costa y pueblos</h3><p class="mt-1 text-sm opacity-70">4 días · cultura y mesa</p><p class="mt-3 text-sm">Desde 740 €</p></a>
+      <a href="#reservar" class="tour block"><div class="overflow-hidden"><img class="w-full aspect-[4/5] object-cover" loading="lazy" alt="Cumbres" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=70"></div><h3 class="text-2xl mt-5">Alta montaña</h3><p class="mt-1 text-sm opacity-70">6 días · trekking medio</p><p class="mt-3 text-sm">Desde 1.150 €</p></a>
+    </div>
+  </section>
+
+  <section id="filosofia" class="border-y line">
+    <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-2 gap-14">
+      <h2 class="text-3xl sm:text-4xl leading-snug">Viajamos despacio y en pocos</h2>
+      <div class="grid gap-8 text-[1.02rem] leading-relaxed">
+        <p>Cada viaje reúne a un máximo de seis personas. Así podemos entrar en casas, mesas y talleres donde un grupo grande no cabe.</p>
+        <p>Alojamientos pequeños, transporte compartido y guías de la zona. Sin prisas ni listas interminables de paradas.</p>
+        <ul class="grid gap-3 text-sm">
+          <li class="flex gap-3"><i class="bi bi-check2"></i>Guía local en todo el recorrido</li>
+          <li class="flex gap-3"><i class="bi bi-check2"></i>Alojamiento y desayunos incluidos</li>
+          <li class="flex gap-3"><i class="bi bi-check2"></i>Cancelación gratuita hasta 30 días antes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="opiniones" class="max-w-4xl mx-auto px-5 py-24 text-center">
+    <p class="font-serif text-2xl sm:text-4xl leading-snug">“Por primera vez volví de un viaje con la sensación de haber estado de verdad.”</p>
+    <p class="mt-6 text-sm opacity-60">Elena, viajó a Lagos del norte</p>
+  </section>
+
+  <section id="reservar" class="bg-[#1c1c1c] text-white">
+    <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-2 gap-14">
+      <div><h2 class="text-3xl sm:text-4xl">Reserva tu plaza</h2><p class="mt-4 text-white/70 max-w-sm">Escríbenos y te enviamos fechas, itinerario y condiciones.</p></div>
+      <form class="grid gap-6" onsubmit="event.preventDefault();this.querySelector('button').textContent='Solicitud enviada'">
+        <input class="field !text-white !border-white/60" placeholder="Nombre" required>
+        <input class="field !text-white !border-white/60" type="email" placeholder="Correo electrónico" required>
+        <select class="field !text-white !border-white/60"><option class="text-black">Lagos del norte</option><option class="text-black">Costa y pueblos</option><option class="text-black">Alta montaña</option></select>
+        <button class="btn-line btn-white justify-self-start">Enviar solicitud</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="max-w-6xl mx-auto px-5 py-12 flex flex-col md:flex-row gap-6 items-center justify-between text-sm">
+  <p class="font-serif text-xl">Lumen</p>
+  <div class="flex gap-6 text-lg">
+    <a href="#" aria-label="Instagram" class="hover:opacity-60"><i class="bi bi-instagram"></i></a>
+    <a href="#" aria-label="Facebook" class="hover:opacity-60"><i class="bi bi-facebook"></i></a>
+    <a href="#" aria-label="Pinterest" class="hover:opacity-60"><i class="bi bi-pinterest"></i></a>
+    <a href="#" aria-label="YouTube" class="hover:opacity-60"><i class="bi bi-youtube"></i></a>
+    <a href="#" aria-label="WhatsApp" class="hover:opacity-60"><i class="bi bi-whatsapp"></i></a>
+  </div>
+  <p class="opacity-60">© 2026 Lumen · Texto de ejemplo</p>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('mobile');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',String(!o));b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+</script>
+<script>
+/* Si una imagen externa no carga, se muestra un fondo de color en su lugar */
+document.querySelectorAll('img').forEach(function(i){
+  function f(){i.removeAttribute('src');i.style.background='linear-gradient(135deg,#cfd8dc,#90a4ae)';i.style.minHeight=i.style.minHeight||'120px'}
+  i.addEventListener('error',f);
+  if(i.complete&&i.naturalWidth===0)f();
+});
+</script>
+</body>
+</html>

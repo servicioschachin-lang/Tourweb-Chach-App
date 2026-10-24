@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mochila Feliz · Tours para toda la familia</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Fredoka','sans-serif']}}}}</script>
+<style>
+  :root{--crema:#fff4e6;--durazno:#ffb98a;--menta:#9be3c4;--rosa:#ffa6c9;--sol:#ffd86b;--cielo:#9fd3ff;--tinta:#5a3e36}
+  body{background:var(--crema);color:var(--tinta);font-family:'Fredoka',sans-serif}
+  .clay{border-radius:2rem;box-shadow:inset -8px -8px 16px rgba(0,0,0,.1),inset 8px 8px 16px rgba(255,255,255,.75),10px 14px 28px rgba(120,70,40,.2)}
+  .clay-sm{border-radius:1.2rem;box-shadow:inset -5px -5px 10px rgba(0,0,0,.1),inset 5px 5px 10px rgba(255,255,255,.7),6px 9px 16px rgba(120,70,40,.2)}
+  .clay-btn{border-radius:9999px;font-weight:600;padding:.85rem 1.8rem;display:inline-block;box-shadow:inset -5px -5px 10px rgba(0,0,0,.12),inset 5px 5px 10px rgba(255,255,255,.65),6px 9px 16px rgba(120,70,40,.25);transition:transform .15s,box-shadow .15s}
+  .clay-btn:hover{transform:translateY(-3px)}
+  .clay-btn:active{transform:translateY(1px);box-shadow:inset 4px 4px 8px rgba(0,0,0,.15),inset -4px -4px 8px rgba(255,255,255,.5)}
+  .field{width:100%;border-radius:1.2rem;padding:.9rem 1.2rem;background:#fff;outline:none;box-shadow:inset 5px 5px 10px rgba(120,70,40,.15),inset -4px -4px 8px #fff}
+  .field:focus{box-shadow:inset 5px 5px 10px rgba(120,70,40,.15),inset -4px -4px 8px #fff,0 0 0 4px rgba(255,166,201,.5)}
+  .hero{background:linear-gradient(rgba(255,244,230,.05),rgba(90,62,54,.35)),url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1600&q=70') center/cover,var(--cielo)}
+  .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.9}
+</style>
+</head>
+<body class="antialiased">
+
+<header class="sticky top-0 z-50 px-3 pt-3">
+  <nav class="clay max-w-6xl mx-auto bg-[#ffe3c7] px-5 py-3 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-2 text-xl font-bold"><span class="clay-sm w-10 h-10 grid place-items-center text-xl" style="background:var(--sol)"><i class="bi bi-backpack2-fill"></i></span>Mochila Feliz</a>
+    <ul class="hidden md:flex items-center gap-7 font-medium">
+      <li><a class="hover:opacity-70" href="#aventuras">Aventuras</a></li>
+      <li><a class="hover:opacity-70" href="#porque">Por qué nosotros</a></li>
+      <li><a class="hover:opacity-70" href="#familias">Familias</a></li>
+      <li><a class="clay-btn !py-2" style="background:var(--rosa)" href="#reserva">Reservar</a></li>
+    </ul>
+    <button id="burger" class="md:hidden clay-sm w-11 h-11 text-2xl grid place-items-center" style="background:var(--menta)" aria-label="Abrir menú" aria-expanded="false"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobile" class="hidden md:hidden clay max-w-6xl mx-auto mt-3 bg-[#ffe3c7] p-5">
+    <ul class="flex flex-col gap-3 text-lg font-medium">
+      <li><a href="#aventuras">Aventuras</a></li><li><a href="#porque">Por qué nosotros</a></li><li><a href="#familias">Familias</a></li>
+      <li><a class="clay-btn text-center block" style="background:var(--rosa)" href="#reserva">Reservar</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="px-3 pt-6">
+    <div class="hero clay max-w-6xl mx-auto min-h-[540px] relative overflow-hidden flex items-center p-6 sm:p-14">
+      <div class="blob w-24 h-24 right-8 top-8" style="background:var(--sol)"></div>
+      <div class="blob w-14 h-14 right-32 bottom-12" style="background:var(--rosa)"></div>
+      <div class="relative max-w-xl text-white">
+        <h1 class="text-4xl sm:text-6xl font-bold leading-tight drop-shadow">¡Vamos de aventura todos juntos!</h1>
+        <p class="mt-4 text-lg drop-shadow">Tours divertidos, seguros y pensados para niños, jóvenes y abuelos. Tú eliges el destino, nosotros ponemos la sonrisa.</p>
+        <div class="mt-7 flex flex-wrap gap-4">
+          <a class="clay-btn text-[#5a3e36]" style="background:var(--sol)" href="#aventuras">Ver aventuras</a>
+          <a class="clay-btn text-[#5a3e36]" style="background:#fff" href="#reserva">Reservar ahora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aventuras" class="px-3 py-20">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center">Elige tu aventura</h2>
+      <p class="text-center mt-2 opacity-80">Actividades para todas las edades.</p>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="clay p-4" style="background:var(--menta)"><img class="clay-sm w-full h-48 object-cover" loading="lazy" alt="Isla tropical" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70"><h3 class="text-xl font-bold mt-4">Día de playa y snorkel</h3><p class="text-sm mt-1">Juegos en la arena, chalecos incluidos y merienda.</p><div class="mt-4 flex justify-between items-center"><b class="text-lg">39 €</b><a class="clay-btn !py-2 !px-5 bg-white text-sm" href="#reserva">Reservar</a></div></article>
+        <article class="clay p-4" style="background:var(--rosa)"><img class="clay-sm w-full h-48 object-cover" loading="lazy" alt="Camping" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=70"><h3 class="text-xl font-bold mt-4">Noche de campamento</h3><p class="text-sm mt-1">Fogata, malvaviscos y cuentos bajo las estrellas.</p><div class="mt-4 flex justify-between items-center"><b class="text-lg">55 €</b><a class="clay-btn !py-2 !px-5 bg-white text-sm" href="#reserva">Reservar</a></div></article>
+        <article class="clay p-4" style="background:var(--cielo)"><img class="clay-sm w-full h-48 object-cover" loading="lazy" alt="Excursión en la montaña" src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=70"><h3 class="text-xl font-bold mt-4">Mini senderismo</h3><p class="text-sm mt-1">Rutas cortas con retos, mapa del tesoro y premio final.</p><div class="mt-4 flex justify-between items-center"><b class="text-lg">29 €</b><a class="clay-btn !py-2 !px-5 bg-white text-sm" href="#reserva">Reservar</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="porque" class="px-3 pb-20">
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="clay p-6 text-center" style="background:var(--sol)"><i class="bi bi-balloon-heart text-4xl"></i><h3 class="font-bold mt-2">Muy divertido</h3><p class="text-sm mt-1">Guías animadores y juegos en cada parada.</p></div>
+      <div class="clay p-6 text-center" style="background:var(--menta)"><i class="bi bi-shield-check text-4xl"></i><h3 class="font-bold mt-2">Súper seguro</h3><p class="text-sm mt-1">Equipo homologado y seguro de viaje.</p></div>
+      <div class="clay p-6 text-center" style="background:var(--rosa)"><i class="bi bi-cake2 text-4xl"></i><h3 class="font-bold mt-2">Menú infantil</h3><p class="text-sm mt-1">Comidas ricas y opciones para alergias.</p></div>
+      <div class="clay p-6 text-center" style="background:var(--cielo)"><i class="bi bi-bus-front text-4xl"></i><h3 class="font-bold mt-2">Transporte cómodo</h3><p class="text-sm mt-1">Recogida en tu hotel o punto cercano.</p></div>
+    </div>
+  </section>
+
+  <section id="familias" class="px-3 pb-20">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+      <blockquote class="clay bg-white p-6"><p>“Mis hijos todavía hablan del campamento. ¡Repetimos en verano!”</p><footer class="mt-3 text-sm opacity-70">Paula · mamá de dos</footer></blockquote>
+      <blockquote class="clay bg-white p-6"><p>“Organizado y alegre. Los guías tienen una paciencia enorme.”</p><footer class="mt-3 text-sm opacity-70">Jorge · papá de Leo</footer></blockquote>
+      <blockquote class="clay bg-white p-6"><p>“Fuimos tres generaciones y todos lo pasamos genial.”</p><footer class="mt-3 text-sm opacity-70">Familia Rojas</footer></blockquote>
+    </div>
+  </section>
+
+  <section id="reserva" class="px-3 pb-20">
+    <div class="clay max-w-3xl mx-auto p-6 sm:p-10" style="background:var(--durazno)">
+      <h2 class="text-3xl font-bold">¡Reserva tu plaza!</h2>
+      <p class="mt-1">Cuéntanos cuántos sois y te preparamos el plan.</p>
+      <form class="mt-6 grid sm:grid-cols-2 gap-4" onsubmit="event.preventDefault();this.querySelector('button').textContent='¡Enviado, gracias!'">
+        <input class="field" placeholder="Tu nombre" required><input class="field" type="email" placeholder="Tu correo" required>
+        <select class="field"><option>Día de playa y snorkel</option><option>Noche de campamento</option><option>Mini senderismo</option></select>
+        <input class="field" type="number" min="1" placeholder="Número de personas">
+        <button class="clay-btn sm:col-span-2 text-[#5a3e36]" style="background:var(--sol)">Enviar solicitud</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="px-3 pb-10">
+  <div class="clay max-w-6xl mx-auto bg-[#ffe3c7] p-7 flex flex-col md:flex-row items-center justify-between gap-5">
+    <p class="font-bold text-lg flex items-center gap-2"><i class="bi bi-backpack2-fill"></i>Mochila Feliz</p>
+    <div class="flex gap-3 text-xl">
+      <a aria-label="Facebook" href="#" class="clay-sm w-12 h-12 grid place-items-center hover:-translate-y-1 transition" style="background:var(--cielo)"><i class="bi bi-facebook"></i></a>
+      <a aria-label="Instagram" href="#" class="clay-sm w-12 h-12 grid place-items-center hover:-translate-y-1 transition" style="background:var(--rosa)"><i class="bi bi-instagram"></i></a>
+      <a aria-label="TikTok" href="#" class="clay-sm w-12 h-12 grid place-items-center hover:-translate-y-1 transition" style="background:var(--menta)"><i class="bi bi-tiktok"></i></a>
+      <a aria-label="YouTube" href="#" class="clay-sm w-12 h-12 grid place-items-center hover:-translate-y-1 transition" style="background:var(--sol)"><i class="bi bi-youtube"></i></a>
+      <a aria-label="WhatsApp" href="#" class="clay-sm w-12 h-12 grid place-items-center hover:-translate-y-1 transition" style="background:var(--menta)"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <p class="text-xs opacity-70">© 2026 Mochila Feliz · Texto de ejemplo</p>
+  </div>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('mobile');
+  b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',String(!o));b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+</script>
+<script>
+/* Si una imagen externa no carga, se muestra un fondo de color en su lugar */
+document.querySelectorAll('img').forEach(function(i){
+  function f(){i.removeAttribute('src');i.style.background='linear-gradient(135deg,#cfd8dc,#90a4ae)';i.style.minHeight=i.style.minHeight||'120px'}
+  i.addEventListener('error',f);
+  if(i.complete&&i.naturalWidth===0)f();
+});
+</script>
+</body>
+</html>

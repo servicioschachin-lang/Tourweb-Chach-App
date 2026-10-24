@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tierra Quieta · Viajes y retiros</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--salvia:#7d8f7a;--arena:#f4f1ec;--carbon:#2a2f2b;--linea:#d9d6cf}
+  body{font-family:'Jost',sans-serif;font-weight:300;background:#fff;color:var(--carbon);font-size:1.08rem;line-height:1.7}
+  h1,h2,h3,h4{font-weight:300;letter-spacing:-.01em;line-height:1.15}
+  .navbar{background:#fff;border-bottom:1px solid var(--linea);padding:1rem 0}
+  .navbar-brand{font-weight:400;letter-spacing:.12em;color:var(--carbon)!important;font-size:1.1rem}
+  .nav-link{color:var(--carbon)!important;font-weight:400;font-size:.95rem;padding:.5rem 1rem!important;position:relative}
+  .nav-link.active::after{content:'';position:absolute;left:1rem;right:1rem;bottom:.2rem;height:1px;background:var(--carbon)}
+  .navbar-toggler{border:0;padding:0}.navbar-toggler:focus{box-shadow:0 0 0 1px var(--carbon)}
+  .btn-min{border:1px solid var(--carbon);border-radius:0;padding:.7rem 1.8rem;color:var(--carbon);background:transparent;font-weight:400;transition:all .25s}
+  .btn-min:hover{background:var(--carbon);color:#fff}
+  .btn-sal{background:var(--salvia);border-color:var(--salvia);color:#fff}
+  .btn-sal:hover{background:var(--carbon);border-color:var(--carbon);color:#fff}
+  .hero{min-height:78vh;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(rgba(20,25,20,.2),rgba(20,25,20,.55)),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=70') center/cover,#7d8f7a}
+  .rule{border-top:1px solid var(--linea)}
+  .tour img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .muted{color:#6c726d}
+  .form-control,.form-select{border:0;border-bottom:1px solid var(--carbon);border-radius:0;padding:.8rem 0;background:transparent;font-weight:300}
+  .form-control:focus,.form-select:focus{box-shadow:none;border-bottom-width:2px;background:transparent}
+  .soc a{color:var(--carbon);font-size:1.15rem;margin-right:1.2rem;text-decoration:none}
+  .soc a:hover{color:var(--salvia)}
+  [data-page]{display:none}[data-page].on{display:block}
+  .accordion-item{border:0;border-top:1px solid var(--linea);border-radius:0}
+  .accordion-item:last-child{border-bottom:1px solid var(--linea)}
+  .accordion-button{background:transparent;font-weight:400;padding:1.3rem 0;color:var(--carbon);box-shadow:none}
+  .accordion-button:not(.collapsed){background:transparent;color:var(--carbon);box-shadow:none}
+  .accordion-button:focus{box-shadow:none}
+  .accordion-body{padding:0 0 1.3rem}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio">TIERRA QUIETA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú"><i class="bi bi-list fs-2"></i></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center pt-3 pt-lg-0">
+        <li class="nav-item"><a class="nav-link" data-link="inicio" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" data-link="viajes" href="#viajes">Viajes</a></li>
+        <li class="nav-item"><a class="nav-link" data-link="sobre" href="#sobre">Sobre nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" data-link="preguntas" href="#preguntas">Preguntas</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-min btn-sm" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- INICIO -->
+  <section data-page="inicio">
+    <div class="hero">
+      <div class="container pb-5">
+        <h1 class="display-3" style="max-width:720px">Un viaje que empieza al bajar el ritmo</h1>
+        <p class="fs-5 mt-3" style="max-width:480px;opacity:.9">Retiros y escapadas de naturaleza, en silencio o en buena compañía.</p>
+        <a class="btn btn-min mt-4" style="color:#fff;border-color:#fff" href="#viajes">Ver los viajes</a>
+      </div>
+    </div>
+    <div class="container py-5 my-lg-4">
+      <div class="row g-5">
+        <div class="col-md-4"><h4>Pocas plazas</h4><p class="muted mb-0">Máximo ocho personas por salida.</p></div>
+        <div class="col-md-4"><h4>Lugares sencillos</h4><p class="muted mb-0">Casas rurales, cabañas y refugios con carácter.</p></div>
+        <div class="col-md-4"><h4>Tiempo libre</h4><p class="muted mb-0">Cada jornada deja espacio para no hacer nada.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIAJES -->
+  <section data-page="viajes" class="container py-5">
+    <h1 class="display-5 mb-2">Viajes</h1>
+    <p class="muted mb-5">Seis propuestas para el próximo año.</p>
+    <div class="row g-5">
+      <div class="col-md-6 col-lg-4 tour"><img loading="lazy" alt="Lago al amanecer" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=70"><h4 class="mt-3">Lago al amanecer</h4><p class="muted small mb-1">3 días · 520 €</p><a class="link-dark" href="#contacto">Consultar</a></div>
+      <div class="col-md-6 col-lg-4 tour"><img loading="lazy" alt="Bosque" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=70"><h4 class="mt-3">Bosque en silencio</h4><p class="muted small mb-1">4 días · 640 €</p><a class="link-dark" href="#contacto">Consultar</a></div>
+      <div class="col-md-6 col-lg-4 tour"><img loading="lazy" alt="Costa" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=70"><h4 class="mt-3">Costa en invierno</h4><p class="muted small mb-1">3 días · 480 €</p><a class="link-dark" href="#contacto">Consultar</a></div>
+      <div class="col-md-6 col-lg-4 tour"><img loading="lazy" alt="Montañas" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=70"><h4 class="mt-3">Cumbres y refugios</h4><p class="muted small mb-1">5 días · 780 €</p><a class="link-dark" href="#contacto">Consultar</a></div>
+      <div class="col-md-6 col-lg-4 tour"><img loading="lazy" alt="Camping" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=70"><h4 class="mt-3">Noche bajo las estrellas</h4><p class="muted small mb-1">2 días · 290 €</p><a class="link-dark" href="#contacto">Consultar</a></div>
+      <div class="col-md-6 col-lg-4 tour"><img loading="lazy" alt="Pueblo costero" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=70"><h4 class="mt-3">Pueblos del sur</h4><p class="muted small mb-1">4 días · 590 €</p><a class="link-dark" href="#contacto">Consultar</a></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section data-page="sobre" class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6"><h1 class="display-5">Viajar con menos ruido</h1><p class="mt-4">Tierra Quieta nace del deseo de volver a mirar. Diseñamos recorridos cortos, con pocas paradas y mucho aire entre ellas.</p><p>Trabajamos con alojamientos familiares, productores de la zona y guías que conocen cada camino desde pequeños.</p></div>
+      <div class="col-lg-6"><img class="w-100" style="aspect-ratio:4/3;object-fit:cover" loading="lazy" alt="Senderistas en la montaña" src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1100&q=70"></div>
+    </div>
+    <div class="row g-5 mt-4 pt-4 rule text-lg-center">
+      <div class="col-md-4"><h2 class="mb-1">8</h2><p class="muted mb-0">personas como máximo</p></div>
+      <div class="col-md-4"><h2 class="mb-1">12 años</h2><p class="muted mb-0">acompañando viajeros</p></div>
+      <div class="col-md-4"><h2 class="mb-1">100%</h2><p class="muted mb-0">guías locales</p></div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section data-page="preguntas" class="container py-5">
+    <div class="mx-auto" style="max-width:720px">
+      <h1 class="display-5 mb-5">Preguntas</h1>
+      <div class="accordion" id="faq">
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">¿Necesito experiencia previa?</button></h2><div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body muted">No. Todas las rutas se adaptan a un ritmo tranquilo.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">¿Qué incluye el precio?</button></h2><div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body muted">Alojamiento, desayunos, guía y transporte durante la actividad.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">¿Puedo viajar solo?</button></h2><div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body muted">Sí. La mayoría de viajeros vienen solos y no pagan suplemento de habitación.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section data-page="contacto" class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-5"><h1 class="display-5">Contacto</h1><p class="muted mt-3">Cuéntanos cuándo te gustaría viajar.</p><p class="mb-1">hola@tierraquieta.com</p><p class="mb-1">+34 622 000 000</p><p>Calle del Olivo 3, Sierra Norte</p></div>
+      <div class="col-lg-7"><form onsubmit="event.preventDefault();this.querySelector('button').textContent='Mensaje enviado'"><div class="row g-4">
+        <div class="col-sm-6"><input class="form-control" placeholder="Nombre" required></div><div class="col-sm-6"><input class="form-control" type="email" placeholder="Correo" required></div>
+        <div class="col-12"><select class="form-select"><option>Lago al amanecer</option><option>Bosque en silencio</option><option>Costa en invierno</option><option>Cumbres y refugios</option></select></div>
+        <div class="col-12"><textarea class="form-control" rows="3" placeholder="Mensaje"></textarea></div>
+        <div class="col-12"><button class="btn btn-min btn-sal">Enviar mensaje</button></div></div></form></div>
+    </div>
+  </section>
+</main>
+
+<footer class="rule">
+  <div class="container py-5 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
+    <span style="letter-spacing:.12em">TIERRA QUIETA</span>
+    <div class="soc"><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div>
+    <small class="muted">© 2026 · Texto de ejemplo</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const pages=[...document.querySelectorAll('[data-page]')],navEl=document.getElementById('nav');
+  function route(){
+    const h=(location.hash||'#inicio').slice(1),t=pages.find(p=>p.dataset.page===h)||pages[0];
+    pages.forEach(p=>p.classList.toggle('on',p===t));
+    document.querySelectorAll('[data-link]').forEach(a=>a.classList.toggle('active',a.dataset.link===t.dataset.page));
+    window.scrollTo(0,0);
+    if(navEl.classList.contains('show'))bootstrap.Collapse.getOrCreateInstance(navEl).hide();
+  }
+  addEventListener('hashchange',route);route();
+</script>
+<script>
+/* Si una imagen externa no carga, se muestra un fondo de color en su lugar */
+document.querySelectorAll('img').forEach(function(i){
+  function f(){i.removeAttribute('src');i.style.background='linear-gradient(135deg,#cfd8dc,#90a4ae)';i.style.minHeight=i.style.minHeight||'120px'}
+  i.addEventListener('error',f);
+  if(i.complete&&i.naturalWidth===0)f();
+});
+</script>
+</body>
+</html>

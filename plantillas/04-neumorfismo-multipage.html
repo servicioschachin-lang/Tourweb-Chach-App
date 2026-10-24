@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sendero Tours · Naturaleza y cultura</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['"DM Sans"','sans-serif']}}}}</script>
+<style>
+  :root{--bg:#e9e2d6;--osc:#bdb2a0;--cla:#fffdf8;--verde:#2f7d5b;--tinta:#4a4033}
+  body{background:var(--bg);color:var(--tinta);font-family:'DM Sans',sans-serif}
+  .n{background:var(--bg);border-radius:1.5rem;box-shadow:10px 10px 20px var(--osc),-10px -10px 20px var(--cla)}
+  .n-sm{background:var(--bg);border-radius:1rem;box-shadow:6px 6px 12px var(--osc),-6px -6px 12px var(--cla)}
+  .n-in{background:var(--bg);border-radius:1rem;box-shadow:inset 6px 6px 12px var(--osc),inset -6px -6px 12px var(--cla)}
+  .btn-n{background:var(--bg);color:var(--verde);font-weight:700;border-radius:1rem;padding:.7rem 1.5rem;box-shadow:6px 6px 12px var(--osc),-6px -6px 12px var(--cla);transition:box-shadow .2s;display:inline-block}
+  .btn-n:hover{box-shadow:inset 4px 4px 8px var(--osc),inset -4px -4px 8px var(--cla)}
+  .btn-v{background:var(--verde);color:#fff;box-shadow:6px 6px 14px rgba(47,125,91,.4),-6px -6px 12px var(--cla)}
+  .btn-v:hover{box-shadow:inset 4px 4px 8px rgba(0,0,0,.25),inset -4px -4px 8px rgba(255,255,255,.15)}
+  .field{width:100%;background:var(--bg);border-radius:1rem;padding:.85rem 1.1rem;outline:none;color:var(--tinta);box-shadow:inset 6px 6px 12px var(--osc),inset -6px -6px 12px var(--cla)}
+  .field:focus{box-shadow:inset 6px 6px 12px var(--osc),inset -6px -6px 12px var(--cla),0 0 0 3px rgba(47,125,91,.3)}
+  .link{padding:.55rem 1.1rem;border-radius:.9rem;font-weight:500;transition:box-shadow .2s}
+  .link:hover{color:var(--verde)}
+  .link.active{color:var(--verde);font-weight:700;box-shadow:inset 4px 4px 8px var(--osc),inset -4px -4px 8px var(--cla)}
+  .hero-bg{background:linear-gradient(rgba(30,60,45,.25),rgba(30,60,45,.5)),url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=70') center/cover,#6b8f7a;border-radius:1.5rem;box-shadow:inset 0 0 0 10px var(--bg)}
+  .soc{width:2.9rem;height:2.9rem;border-radius:50%;display:grid;place-items:center;color:var(--verde);font-size:1.15rem}
+  [data-page]{display:none}[data-page].on{display:block}
+</style>
+</head>
+<body class="antialiased">
+
+<header class="px-4 pt-5">
+  <nav class="n max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="#inicio" class="font-bold text-xl flex items-center gap-2" style="color:var(--verde)"><i class="bi bi-tree"></i>Sendero Tours</a>
+    <ul class="hidden md:flex items-center gap-2">
+      <li><a class="link" data-link="inicio" href="#inicio">Inicio</a></li>
+      <li><a class="link" data-link="tours" href="#tours">Tours</a></li>
+      <li><a class="link" data-link="nosotros" href="#nosotros">Nosotros</a></li>
+      <li><a class="link" data-link="faq" href="#faq">Preguntas</a></li>
+      <li><a class="btn-n btn-v ml-2" href="#contacto">Contacto</a></li>
+    </ul>
+    <button id="burger" class="md:hidden n-sm w-11 h-11 grid place-items-center text-2xl" aria-label="Abrir menú" aria-expanded="false"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobile" class="hidden md:hidden n max-w-6xl mx-auto mt-4 p-5">
+    <ul class="flex flex-col gap-3 text-lg">
+      <li><a class="link block" data-link="inicio" href="#inicio">Inicio</a></li>
+      <li><a class="link block" data-link="tours" href="#tours">Tours</a></li>
+      <li><a class="link block" data-link="nosotros" href="#nosotros">Nosotros</a></li>
+      <li><a class="link block" data-link="faq" href="#faq">Preguntas</a></li>
+      <li><a class="btn-n btn-v text-center block" href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+
+  <!-- INICIO -->
+  <section data-page="inicio">
+    <div class="hero-bg min-h-[460px] flex items-end p-8 sm:p-14 text-white">
+      <div class="max-w-xl">
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">Caminos tranquilos, paisajes que respiran</h1>
+        <p class="mt-4 text-white/90">Excursiones de naturaleza y cultura local para quienes prefieren viajar sin prisa.</p>
+        <a href="#tours" class="btn-n btn-v mt-6">Descubrir tours</a>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6 mt-10">
+      <div class="n p-6"><div class="n-in w-14 h-14 grid place-items-center text-2xl mb-3" style="color:var(--verde)"><i class="bi bi-binoculars"></i></div><h3 class="font-bold text-lg">Observación de fauna</h3><p class="text-sm mt-1 opacity-80">Salidas al amanecer con guía naturalista.</p></div>
+      <div class="n p-6"><div class="n-in w-14 h-14 grid place-items-center text-2xl mb-3" style="color:var(--verde)"><i class="bi bi-cup-hot"></i></div><h3 class="font-bold text-lg">Gastronomía local</h3><p class="text-sm mt-1 opacity-80">Degustaciones en granjas y mercados.</p></div>
+      <div class="n p-6"><div class="n-in w-14 h-14 grid place-items-center text-2xl mb-3" style="color:var(--verde)"><i class="bi bi-bicycle"></i></div><h3 class="font-bold text-lg">Rutas en bici</h3><p class="text-sm mt-1 opacity-80">Itinerarios suaves para todos los niveles.</p></div>
+    </div>
+  </section>
+
+  <!-- TOURS -->
+  <section data-page="tours">
+    <h1 class="text-3xl sm:text-4xl font-bold">Todos los tours</h1>
+    <p class="mt-2 opacity-80">Salidas reducidas, ritmo amable y guías de la zona.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-8">
+      <article class="n p-4"><img class="w-full h-48 object-cover rounded-2xl" loading="lazy" alt="Bosque" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=70"><h3 class="font-bold text-xl mt-4">Paseo por el bosque</h3><p class="text-sm opacity-80 mt-1">Sendero circular de 3 horas con picnic.</p><div class="flex justify-between items-center mt-4"><b style="color:var(--verde)">30 €</b><a class="btn-n !py-2 !px-4 text-sm" href="#contacto">Reservar</a></div></article>
+      <article class="n p-4"><img class="w-full h-48 object-cover rounded-2xl" loading="lazy" alt="Viñedos" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=70"><h3 class="font-bold text-xl mt-4">Ruta de los viñedos</h3><p class="text-sm opacity-80 mt-1">Visita a bodegas familiares y cata guiada.</p><div class="flex justify-between items-center mt-4"><b style="color:var(--verde)">58 €</b><a class="btn-n !py-2 !px-4 text-sm" href="#contacto">Reservar</a></div></article>
+      <article class="n p-4"><img class="w-full h-48 object-cover rounded-2xl" loading="lazy" alt="Lago" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=70"><h3 class="font-bold text-xl mt-4">Lago en bicicleta</h3><p class="text-sm opacity-80 mt-1">Circuito llano de 25 km con paradas fotográficas.</p><div class="flex justify-between items-center mt-4"><b style="color:var(--verde)">35 €</b><a class="btn-n !py-2 !px-4 text-sm" href="#contacto">Reservar</a></div></article>
+      <article class="n p-4"><img class="w-full h-48 object-cover rounded-2xl" loading="lazy" alt="Pueblo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=70"><h3 class="font-bold text-xl mt-4">Pueblos con encanto</h3><p class="text-sm opacity-80 mt-1">Tres aldeas en un día, con comida incluida.</p><div class="flex justify-between items-center mt-4"><b style="color:var(--verde)">62 €</b><a class="btn-n !py-2 !px-4 text-sm" href="#contacto">Reservar</a></div></article>
+      <article class="n p-4"><img class="w-full h-48 object-cover rounded-2xl" loading="lazy" alt="Cascada" src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=70"><h3 class="font-bold text-xl mt-4">Cascadas escondidas</h3><p class="text-sm opacity-80 mt-1">Caminata moderada y baño en pozas naturales.</p><div class="flex justify-between items-center mt-4"><b style="color:var(--verde)">40 €</b><a class="btn-n !py-2 !px-4 text-sm" href="#contacto">Reservar</a></div></article>
+      <article class="n p-4"><img class="w-full h-48 object-cover rounded-2xl" loading="lazy" alt="Atardecer en la montaña" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=70"><h3 class="font-bold text-xl mt-4">Atardecer en el mirador</h3><p class="text-sm opacity-80 mt-1">Subida corta y cena ligera en la cumbre.</p><div class="flex justify-between items-center mt-4"><b style="color:var(--verde)">45 €</b><a class="btn-n !py-2 !px-4 text-sm" href="#contacto">Reservar</a></div></article>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section data-page="nosotros">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div><h1 class="text-3xl sm:text-4xl font-bold">Viajar despacio, mirar más</h1><p class="mt-4 opacity-90">Sendero Tours nació de una idea simple: acompañar a pequeños grupos por caminos poco transitados, con tiempo para detenerse y conversar.</p><p class="mt-3 opacity-90">Trabajamos con productores, alojamientos y guías de la zona para que cada visita deje algo bueno en el lugar.</p></div>
+      <img class="n w-full h-80 object-cover" loading="lazy" alt="Grupo caminando" src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1000&q=70">
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6 mt-10 text-center">
+      <div class="n p-6"><p class="text-3xl font-bold" style="color:var(--verde)">9</p><p class="text-sm opacity-80">años guiando</p></div>
+      <div class="n p-6"><p class="text-3xl font-bold" style="color:var(--verde)">14</p><p class="text-sm opacity-80">guías locales</p></div>
+      <div class="n p-6"><p class="text-3xl font-bold" style="color:var(--verde)">8 </p><p class="text-sm opacity-80">personas como máximo</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section data-page="faq" class="max-w-3xl mx-auto">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-8">Preguntas frecuentes</h1>
+    <div class="grid gap-5">
+      <details class="n p-5"><summary class="font-bold cursor-pointer">¿Qué debo llevar?</summary><p class="mt-3 text-sm opacity-90">Calzado cómodo, agua, protección solar y ropa por capas. Te enviamos una lista completa al reservar.</p></details>
+      <details class="n p-5"><summary class="font-bold cursor-pointer">¿Puedo cancelar mi reserva?</summary><p class="mt-3 text-sm opacity-90">Sí, sin coste hasta 48 horas antes de la salida.</p></details>
+      <details class="n p-5"><summary class="font-bold cursor-pointer">¿Hay descuentos para niños?</summary><p class="mt-3 text-sm opacity-90">Los menores de 12 años pagan la mitad en rutas aptas para familias.</p></details>
+      <details class="n p-5"><summary class="font-bold cursor-pointer">¿Qué pasa si llueve?</summary><p class="mt-3 text-sm opacity-90">Ofrecemos un plan alternativo o reprogramamos la salida sin coste.</p></details>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section data-page="contacto">
+    <div class="grid lg:grid-cols-5 gap-8">
+      <div class="lg:col-span-2"><h1 class="text-3xl sm:text-4xl font-bold">Escríbenos</h1><p class="mt-3 opacity-90">Te contestamos en un día laborable.</p>
+        <div class="mt-6 grid gap-3 text-sm"><p><i class="bi bi-envelope mr-2" style="color:var(--verde)"></i>hola@sendero.tours</p><p><i class="bi bi-telephone mr-2" style="color:var(--verde)"></i>+34 611 000 000</p><p><i class="bi bi-geo-alt mr-2" style="color:var(--verde)"></i>Camino Real 8, Sierra Verde</p></div></div>
+      <form class="n p-6 sm:p-8 lg:col-span-3 grid sm:grid-cols-2 gap-4" onsubmit="event.preventDefault();this.querySelector('button').textContent='Mensaje enviado'">
+        <input class="field" placeholder="Nombre" required><input class="field" type="email" placeholder="Correo" required>
+        <select class="field sm:col-span-2"><option>Paseo por el bosque</option><option>Ruta de los viñedos</option><option>Lago en bicicleta</option><option>Cascadas escondidas</option></select>
+        <textarea class="field sm:col-span-2" rows="4" placeholder="Tu mensaje"></textarea>
+        <button class="btn-n btn-v sm:col-span-2">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="max-w-6xl mx-auto px-4 pb-10">
+  <div class="n p-6 flex flex-col md:flex-row items-center justify-between gap-5">
+    <p class="font-bold flex items-center gap-2" style="color:var(--verde)"><i class="bi bi-tree"></i>Sendero Tours</p>
+    <div class="flex gap-4">
+      <a href="#" aria-label="Facebook" class="soc n-sm"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Instagram" class="soc n-sm"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="Pinterest" class="soc n-sm"><i class="bi bi-pinterest"></i></a>
+      <a href="#" aria-label="YouTube" class="soc n-sm"><i class="bi bi-youtube"></i></a>
+      <a href="#" aria-label="WhatsApp" class="soc n-sm"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <p class="text-xs opacity-70">© 2026 Sendero Tours · Texto de ejemplo</p>
+  </div>
+</footer>
+
+<script>
+  const pages=[...document.querySelectorAll('[data-page]')],burger=document.getElementById('burger'),mobile=document.getElementById('mobile');
+  function closeMenu(){mobile.classList.add('hidden');burger.setAttribute('aria-expanded','false');burger.innerHTML='<i class="bi bi-list"></i>'}
+  burger.addEventListener('click',()=>{const open=mobile.classList.toggle('hidden');burger.setAttribute('aria-expanded',String(!open));burger.innerHTML=open?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+  function route(){
+    const h=(location.hash||'#inicio').slice(1),t=pages.find(p=>p.dataset.page===h)||pages[0];
+    pages.forEach(p=>p.classList.toggle('on',p===t));
+    document.querySelectorAll('[data-link]').forEach(a=>a.classList.toggle('active',a.dataset.link===t.dataset.page));
+    window.scrollTo(0,0);closeMenu();
+  }
+  addEventListener('hashchange',route);route();
+</script>
+<script>
+/* Si una imagen externa no carga, se muestra un fondo de color en su lugar */
+document.querySelectorAll('img').forEach(function(i){
+  function f(){i.removeAttribute('src');i.style.background='linear-gradient(135deg,#cfd8dc,#90a4ae)';i.style.minHeight=i.style.minHeight||'120px'}
+  i.addEventListener('error',f);
+  if(i.complete&&i.naturalWidth===0)f();
+});
+</script>
+</body>
+</html>
