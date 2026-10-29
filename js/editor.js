@@ -137,6 +137,8 @@ export class Editor {
     });
     clon.querySelectorAll('[data-cw-img]').forEach(n => n.removeAttribute('data-cw-img'));
     clon.querySelectorAll('[data-cw-social]').forEach(n => n.removeAttribute('data-cw-social'));
+    clon.querySelectorAll('[data-cw-bg-img]').forEach(n => n.removeAttribute('data-cw-bg-img'));
+    clon.querySelectorAll('[data-cw-hero-bg]').forEach(n => n.removeAttribute('data-cw-hero-bg'));
     const fondo = $('#colorFondo').value;
     const texto = $('#colorTexto').value;
     const fuenteBody = $('#fuenteBody') ? $('#fuenteBody').value : '';
@@ -191,6 +193,12 @@ export class Editor {
       el.removeAttribute('data-cw-btn-grad-fin');
     });
     clon.querySelectorAll('[data-cw-social-name]').forEach(n => n.removeAttribute('data-cw-social-name'));
+    // Limpieza final: eliminar cualquier atributo residual del editor (data-cw*)
+    clon.querySelectorAll('*').forEach(n => {
+      [...n.attributes].forEach(attr => {
+        if (attr.name.startsWith('data-cw')) n.removeAttribute(attr.name);
+      });
+    });
     return '<!DOCTYPE html>\n' + clon.outerHTML;
   }
   saveToStorage() {
